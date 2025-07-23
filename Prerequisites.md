@@ -17,16 +17,17 @@ Used to interact with AWS services, including setting credentials and configurin
 **Go to official website download the file based on your OS**
 ```bash
 https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
-
 ````
 #### Check the version 
 ```bash
 aws --version
 ````
+
 #### 📌 Example Output:
 ````bash
 aws-cli/2.15.23 Python/3.11.4 Linux/5.15.0-84-generic exe/x86_64
 ````
+
 #### 🔐 Configure:
 ````bash
 aws configure
@@ -52,13 +53,13 @@ It is essential when working with Kubernetes — including on Amazon EKS — bec
 **Go to official website download the file based on your OS**
 ```bash
 https://kubernetes.io/docs/tasks/tools/
-
 ````
+
 #### Check the version 
 ```bash
 kubectl version --client
-
 ````
+
 #### 📌 Example Output:
 ````bash
 Client Version: version.Info{Major:"1", Minor:"30", GitVersion:"v1.30.1", ...}
@@ -93,11 +94,16 @@ iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocola
 #### Check the version 
 ```bash
 choco -v
-
 ````
+
 **Install Eksctl**
 ````bash
-choco install -y
+choco install eksctl -y
+````
+
+#### Check the version 
+```bash
+eksctl version 
 ````
 
 #### 📌 Example Output:
