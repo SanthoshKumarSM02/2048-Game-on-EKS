@@ -9,6 +9,7 @@ This guide walks you through installing and configuring the required tools to de
 ### 1. **AWS CLI**
 
 **Why it's needed:**  
+
 Used to interact with AWS services, including setting credentials and configuring regions.
 
 #### 🔧 Installation:
@@ -42,7 +43,9 @@ aws configure
 ### 2. **Kubectl**
 
 **Why it's needed:**  
-Used to interact with AWS services, including setting credentials and configuring regions.
+
+kubectl (pronounced "kube control") is the command-line tool for interacting with Kubernetes clusters.
+It is essential when working with Kubernetes — including on Amazon EKS — because it allows you to manage and deploy applications.
 
 #### 🔧 Installation:
 
