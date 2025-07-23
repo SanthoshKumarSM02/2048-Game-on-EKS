@@ -16,3 +16,13 @@ Used to interact with AWS services, including setting credentials and configurin
 **Go to official website download the file based on your OS**
 ```bash
 https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
+
+````
+#### Check the version 
+```bash
+aws --version
+````
+#### 📌 Example Output:
+````bash
+aws-cli/2.15.23 Python/3.11.4 Linux/5.15.0-84-generic exe/x86_64
+````
