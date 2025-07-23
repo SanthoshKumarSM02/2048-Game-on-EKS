@@ -37,7 +37,7 @@ aws configure
 #### 4. Default output format (e.g., json)
 
 
-## ✅ Tools Required
+## 
 
 ### 2. **Kubectl**
 
