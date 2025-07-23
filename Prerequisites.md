@@ -13,6 +13,6 @@ Used to interact with AWS services, including setting credentials and configurin
 
 #### 🔧 Installation:
 
-**macOS (via Homebrew):**
+**Go to official website download the file based on your OS**
 ```bash
-brew install awscli
+https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
