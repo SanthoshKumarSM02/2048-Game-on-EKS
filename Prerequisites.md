@@ -30,7 +30,7 @@ aws-cli/2.15.23 Python/3.11.4 Linux/5.15.0-84-generic exe/x86_64
 ````bash
 aws configure
 ````
-** Provide **
+### Provide 
 #### 1. AWS Access Key ID
 #### 2. AWS Secret Access Key
 #### 3. Default region (e.g., us-west-2)
