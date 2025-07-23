@@ -39,7 +39,7 @@ aws configure
 
 ## ✅ Tools Required
 
-### 2. ** Kubectl **
+### 2. **Kubectl**
 
 **Why it's needed:**  
 Used to interact with AWS services, including setting credentials and configuring regions.
