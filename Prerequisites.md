@@ -63,3 +63,45 @@ kubectl version --client
 ````bash
 Client Version: version.Info{Major:"1", Minor:"30", GitVersion:"v1.30.1", ...}
 ````
+
+##
+
+### 3. **Eksctl**
+
+**Why it's needed:**  
+### eksctl is a command-line tool built specifically to manage Amazon EKS (Elastic Kubernetes Service) clusters.
+
+### While you could create and manage EKS clusters using the AWS Console, CloudFormation, or the AWS CLI, eksctl dramatically simplifies and automates the process.
+
+
+
+#### 🔧 Installation:
+
+**Install Chocolatey**
+
+**💡 Why install Chocolatey before installing eksctl (on Windows)?**
+
+**Chocolatey is a Windows package manager — similar to apt on Ubuntu or brew on macOS. It simplifies the installation of tools like eksctl, kubectl, awscli, etc.**
+
+```bash
+Set-ExecutionPolicy Bypass -Scope Process -Force; `
+[System.Net.ServicePointManager]::SecurityProtocol = `
+[System.Net.ServicePointManager]::SecurityProtocol -bor 3072; `
+iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+
+````
+#### Check the version 
+```bash
+choco -v
+
+````
+**Install Eksctl**
+````bash
+choco install -y
+````
+
+#### 📌 Example Output:
+````bash
+eksctl version: 0.180.0
+GitVersion: 0.180.0
+````
