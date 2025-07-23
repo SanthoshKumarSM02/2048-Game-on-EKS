@@ -35,3 +35,28 @@ aws configure
 #### 2. AWS Secret Access Key
 #### 3. Default region (e.g., us-west-2)
 #### 4. Default output format (e.g., json)
+
+
+## ✅ Tools Required
+
+### 2. ** Kubectl **
+
+**Why it's needed:**  
+Used to interact with AWS services, including setting credentials and configuring regions.
+
+#### 🔧 Installation:
+
+**Go to official website download the file based on your OS**
+```bash
+https://kubernetes.io/docs/tasks/tools/
+
+````
+#### Check the version 
+```bash
+kubectl version --client
+
+````
+#### 📌 Example Output:
+````bash
+Client Version: version.Info{Major:"1", Minor:"30", GitVersion:"v1.30.1", ...}
+````
