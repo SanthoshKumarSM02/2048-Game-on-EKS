@@ -69,9 +69,9 @@ Client Version: version.Info{Major:"1", Minor:"30", GitVersion:"v1.30.1", ...}
 ### 3. **Eksctl**
 
 **Why it's needed:**  
-### eksctl is a command-line tool built specifically to manage Amazon EKS (Elastic Kubernetes Service) clusters.
+** eksctl is a command-line tool built specifically to manage Amazon EKS (Elastic Kubernetes Service) clusters.
 
-### While you could create and manage EKS clusters using the AWS Console, CloudFormation, or the AWS CLI, eksctl dramatically simplifies and automates the process.
+** While you could create and manage EKS clusters using the AWS Console, CloudFormation, or the AWS CLI, eksctl dramatically simplifies and automates the process.
 
 
 
