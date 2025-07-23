@@ -96,7 +96,7 @@ iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocola
 choco -v
 ````
 
-**Install Eksctl**
+** 🔧 Install Eksctl**
 ````bash
 choco install eksctl -y
 ````
