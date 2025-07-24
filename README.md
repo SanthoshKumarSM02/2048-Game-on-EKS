@@ -1,8 +1,8 @@
 # 2048-Game-on-EKS
 Deploying the 2048 game application on a Kubernetes cluster using kubectl, eksctl, and AWS CLI.
 
-#Step.1 
-##Create EKS Cluster
+# Step.1 
+## Create EKS Cluster
 
 ```bash
 eksctl create cluster --name my-eks-cluster --region us-east-1 --fargate
