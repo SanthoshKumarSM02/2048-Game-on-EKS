@@ -62,4 +62,53 @@ It will create a **fully managed EKS cluster with Fargate profiles**, meaning yo
 ---
 
 
+# Step 2 
+
+```bash
+aws eks update-kubeconfig --name my-eks-cluster --region eu-north-1
+```
+
+---
+
+### ✅ **What this command does:**
+
+This command **configures your local `kubectl`** tool to connect to your **EKS (Elastic Kubernetes Service) cluster** on AWS.
+
+---
+
+### 🧠 **Breakdown:**
+
+* `aws eks`: This is the AWS CLI command group for working with EKS (Elastic Kubernetes Service).
+* `update-kubeconfig`: This subcommand updates your local **kubeconfig file** (usually `~/.kube/config`) so that you can interact with your EKS cluster using `kubectl`.
+* `--name my-eks-cluster`: Specifies the name of the EKS cluster you want to connect to.
+* `--region eu-north-1`: Tells AWS CLI the region where the cluster is deployed (e.g., Stockholm, Europe).
+
+---
+
+### 🔧 **What it actually does:**
+
+* **Authenticates** with AWS.
+* **Fetches the endpoint** and **authentication token** for the EKS cluster.
+* **Adds or updates** a section in your `~/.kube/config` file.
+* After running this, you can use:
+
+  ```bash
+  kubectl get nodes
+  kubectl get pods
+  ```
+
+  and it will talk to your EKS cluster.
+
+---
+
+### ✅ **When to use it:**
+
+* Right after creating a new EKS cluster.
+* If you're switching between clusters.
+* If someone shared a cluster name with you, and you want to access it from your machine.
+
+Let me know if you want to see the exact contents added to the kubeconfig!
+
+
+
 
