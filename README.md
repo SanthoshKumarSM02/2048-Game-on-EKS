@@ -62,7 +62,7 @@ It will create a **fully managed EKS cluster with Fargate profiles**, meaning yo
 ---
 
 
-# Step 2 
+# Step.2 
 
 ```bash
 aws eks update-kubeconfig --name my-eks-cluster --region eu-north-1
@@ -91,6 +91,25 @@ This command **configures your local `kubectl`** tool to connect to your **EKS (
 * **Fetches the endpoint** and **authentication token** for the EKS cluster.
 * **Adds or updates** a section in your `~/.kube/config` file.
 
+---
+# Step.3
+
+# Create Fargate Profile 
+
+```bash
+eksctl create fargateprofile \
+    --cluster demo-cluster \
+    --region us-east-1 \
+    --name alb-sample-app \
+    --namespace game-2048
+```
+
+## ✅ What this command does:
+It creates a Fargate Profile for your EKS cluster named demo-cluster in the us-east-1 region.
+
+This Fargate profile will make sure that any Pods deployed in the game-2048 namespace will run on AWS Fargate instead of EC2 instances.
+
+---
 
 
 
