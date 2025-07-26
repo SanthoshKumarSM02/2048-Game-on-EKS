@@ -46,7 +46,7 @@ If you apply the above `deploy.yaml` file to a Kubernetes cluster (e.g., on Amaz
 
 ---
 
-### ✅ **What It Does:
+### ✅ What It Does:
 
 1. **Creates a Deployment** named `eks-sample-linux-deployment`.
 2. **Spins up 3 replicas (Pods)** running the `nginx` container (`public.ecr.aws/nginx/nginx:1.23`).
