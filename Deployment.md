@@ -1,4 +1,4 @@
-deploy.yaml file
+Create the deploy.yaml file for deployment
 
 ```bash
 apiVersion: apps/v1
@@ -36,6 +36,10 @@ spec:
         imagePullPolicy: IfNotPresent
       nodeSelector:
         kubernetes.io/os: Linux
+```
+Run the command for the deployment
+```bash
+kubectl apply -f deploy.yaml
 ```
 
 If you apply the above `deploy.yaml` file to a Kubernetes cluster (e.g., on Amazon EKS), here’s what will happen step by step:
