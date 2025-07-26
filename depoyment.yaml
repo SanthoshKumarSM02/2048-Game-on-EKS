@@ -1,6 +1,6 @@
 deploy.yaml file
 
-````bash
+```yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -36,7 +36,7 @@ spec:
         imagePullPolicy: IfNotPresent
       nodeSelector:
         kubernetes.io/os: Linux
-````
+```
 
 If you apply the above `deploy.yaml` file to a Kubernetes cluster (e.g., on Amazon EKS), here’s what will happen step by step:
 
