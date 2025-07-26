@@ -90,24 +90,7 @@ This command **configures your local `kubectl`** tool to connect to your **EKS (
 * **Authenticates** with AWS.
 * **Fetches the endpoint** and **authentication token** for the EKS cluster.
 * **Adds or updates** a section in your `~/.kube/config` file.
-* After running this, you can use:
 
-  ```bash
-  kubectl get nodes
-  kubectl get pods
-  ```
-
-  and it will talk to your EKS cluster.
-
----
-
-### ✅ **When to use it:**
-
-* Right after creating a new EKS cluster.
-* If you're switching between clusters.
-* If someone shared a cluster name with you, and you want to access it from your machine.
-
-Let me know if you want to see the exact contents added to the kubeconfig!
 
 
 
