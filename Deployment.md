@@ -1,6 +1,6 @@
 Create the deploy.yaml file for deployment
 
-```bash
+```yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -38,7 +38,7 @@ spec:
         kubernetes.io/os: Linux
 ```
 Run the command for the deployment
-```bash
+```yaml
 kubectl apply -f deploy.yaml
 ```
 
