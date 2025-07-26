@@ -112,7 +112,7 @@ This Fargate profile will make sure that any Pods deployed in the game-2048 name
 ---
 # Step.4
 Deploy the deployment, service and Ingress
-## Deploy.yaml 
+<!-- ## Deploy.yaml 
 
 ```yaml
 apiVersion: apps/v1
@@ -177,6 +177,8 @@ Command to execute
 ```bash
 kubectl apply -f service.yaml
 ```
+-->
+
 
 
 
