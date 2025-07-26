@@ -178,8 +178,22 @@ Command to execute
 kubectl apply -f service.yaml
 ```
 -->
+```bash
+kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/v2.5.4/docs/examples/2048/2048_full.yaml
+```
+## ✅ What it does:
+It downloads and applies a Kubernetes YAML file from the internet — specifically a sample app called "2048" — and deploys it into your EKS cluster.
 
+## 📦 What gets created by this command:
+The YAML file includes several Kubernetes objects:
 
+1. Namespace: game-2048
+
+2. Deployment: The 2048 app pod
+
+3. Service: A Service that exposes the pod
+
+4. Ingress: Defines the ALB Ingress rules, so AWS ALB (Application Load Balancer) can route external traffic to your app
 
 
 
