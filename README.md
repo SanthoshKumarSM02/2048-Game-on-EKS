@@ -5,7 +5,7 @@ Deploying the 2048 game application on a Kubernetes cluster using kubectl, eksct
 ## Create EKS Cluster
 
 ```bash
-eksctl create cluster --name my-eks-cluster --region us-east-1 --fargate
+eksctl create cluster --name my-eks-cluster --region eu-north-1 --fargate
 ```
 
 It will create a **fully managed EKS cluster with Fargate profiles**, meaning your pods will run on **serverless infrastructure**, not EC2 nodes.
@@ -98,8 +98,8 @@ This command **configures your local `kubectl`** tool to connect to your **EKS (
 
 ```bash
 eksctl create fargateprofile \
-    --cluster demo-cluster \
-    --region us-east-1 \
+    --cluster my-eks-cluster \
+    --region es-north-1 \
     --name alb-sample-app \
     --namespace game-2048
 ```
