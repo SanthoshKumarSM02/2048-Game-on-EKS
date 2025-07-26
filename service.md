@@ -29,6 +29,6 @@ This creates a **Kubernetes Service** of the default type `ClusterIP` (because y
 ---
  # command to deploy the service
 
-```bash
+```yaml
 kubectl apply -f service.yaml
 ```
