@@ -195,5 +195,25 @@ The YAML file includes several Kubernetes objects:
 
 4. Ingress: Defines the ALB Ingress rules, so AWS ALB (Application Load Balancer) can route external traffic to your app
 
+---
+# Step.4
+## Create IAM Policy
+```bash
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/v2.11.0/docs/install/iam_policy.json" -OutFile "iam_policy.json"
+```
+🔽 This downloads the IAM policy document (JSON file) used by the AWS Load Balancer Controller.
+
+```bash
+aws iam create-policy --policy-name AWSLoadBalancerControllerIAMPolicy --policy-document file://iam_policy.json
+```
+
+🔐 This step creates the policy in your AWS account so that it can later be attached to a service account used by the AWS Load Balancer Controller in your EKS cluster.
+
+## 💡Purpose of these commands:
+These two commands download and create an IAM policy that is required for the AWS Load Balancer Controller to function properly in an EKS (Elastic Kubernetes Service) cluster.
+
+---
+
+
 
 
