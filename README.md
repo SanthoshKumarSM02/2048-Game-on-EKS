@@ -205,16 +205,16 @@ kubectl get pods -n game-2048
 ```bash
 kubectl get svc -n game-2048
 ```
-## 🔍 What it does:
-Lists all Services in the game-2048 namespace.
-Shows how the application is exposed (internally or externally).
+🔍 What it does:
+1. Lists all Services in the game-2048 namespace.
+2. Shows how the application is exposed (internally or externally).
 ---
 ```bash
 kubectl get ingress -n game-2048
 ```
 
-## 🔍 This command lists all Ingress resources in the game-2048 namespace, showing how external HTTP/HTTPS traffic is routed.
-🌐 It helps verify if your app is exposed via a domain or AWS ALB (Application Load Balancer).
+1. This command lists all Ingress resources in the game-2048 namespace, showing how external HTTP/HTTPS traffic is routed.
+2. It helps verify if your app is exposed via a domain or AWS ALB (Application Load Balancer).
 ---
 
 ```bash
