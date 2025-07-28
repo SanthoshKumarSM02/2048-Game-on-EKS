@@ -238,9 +238,10 @@ aws iam create-policy --policy-name AWSLoadBalancerControllerIAMPolicy --policy-
 ```
 
 🔐 This step creates the policy in your AWS account so that it can later be attached to a service account used by the AWS Load Balancer Controller in your EKS cluster.
-
+---
 Purpose of these commands:
 These two commands download and create an IAM policy that is required for the AWS Load Balancer Controller to function properly in an EKS (Elastic Kubernetes Service) cluster.
+
 ---
 
 # Step.5
@@ -265,7 +266,7 @@ eksctl create iamserviceaccount `
 ---
 # Step.6
 
-# deploys the AWS Load Balancer Controller into your Amazon EKS cluster, using Helm, a package manager for Kubernetes.
+# Deploys the AWS Load Balancer Controller into your Amazon EKS cluster, using Helm, a package manager for Kubernetes.
 ```bash
 helm repo add eks https://aws.github.io/eks-charts
 ```
