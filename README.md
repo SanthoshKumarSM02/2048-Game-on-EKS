@@ -213,6 +213,58 @@ aws iam create-policy --policy-name AWSLoadBalancerControllerIAMPolicy --policy-
 These two commands download and create an IAM policy that is required for the AWS Load Balancer Controller to function properly in an EKS (Elastic Kubernetes Service) cluster.
 
 ---
+# Step.5
+## creates an IAM service account in your EKS cluster and attaches the IAM policy you created earlier (for the AWS Load Balancer Controller).
+
+```bash
+eksctl create iamserviceaccount `
+  --cluster=my-eks-cluster `
+  --namespace=kube-system `
+  --name=aws-load-balancer-controller-1 `
+  --role-name AmazonEKSLoadBalancerControllerRole `
+  --attach-policy-arn=arn:aws:iam::<aws-acc-id>:policy/AWSLoadBalancerControllerIAMPolicy `
+  --approve
+
+```
+## 🧠 What happens behind the scenes:
+1. IAM Role is created (with the policy attached).
+2. The role is linked to the Kubernetes service account using IAM OIDC (so pods using this service account can assume the role).
+3. The service account is created inside your cluster (kube-system namespace).
+4. Later, when you deploy the AWS Load Balancer Controller, you will configure it to use this service account — so it can interact with AWS services like    ELB, Target Groups, etc.
+
+---
+# Steo.6
+
+# deploys the AWS Load Balancer Controller into your Amazon EKS cluster, using Helm, a package manager for Kubernetes.
+```bash
+helm repo add eks https://aws.github.io/eks-charts
+```
+
+```bash
+helm repo update eks
+```
+```bash
+helm install aws-load-balancer-controller eks/aws-load-balancer-controller -n kube-system `
+  --set clusterName=my-eks-cluster `
+  --set serviceAccount.create=false `
+  --set serviceAccount.name=aws-load-balancer-controller `
+  --set region=eu-north-1 `
+  --set vpcId=<vpc-id>
+```
+# 🧠 What happens after this:
+1. The AWS Load Balancer Controller is deployed into your EKS cluster.
+2. It starts watching for Kubernetes Ingress or Service resources.
+3. When it detects them, it automatically provisions:
+
+     * Application Load Balancers (ALBs) or
+     * Target Groups
+     * Based on what your application needs.
+       
+4. It uses the IAM service account (linked to the IAM role with permissions) to call AWS APIs.
+
+---
+# Step.7
+## List Deployments in the kube-system Namespace and 
 
 
 
